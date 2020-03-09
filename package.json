@@ -1,5 +1,5 @@
 {
-  "name": "briannatakum.github.io-src",
+  "name": "briannatakum.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "del": "del /q ..\\briannatakum.github.io\\ && for /D %d in (..\\briannatakum.github.io\\*) do if '%d' neq '..\\briannatakum.github.io\\.git' rd /s /q %d",
+    "copy": "npm run del && xcopy .\\build ..\\briannatakum.github.io\\ /E /Q /Y"
   },
   "eslintConfig": {
     "extends": "react-app"
